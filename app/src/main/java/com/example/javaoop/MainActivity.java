@@ -3,6 +3,7 @@ package com.example.javaoop;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,5 +26,13 @@ public class MainActivity extends AppCompatActivity {
         Liza.breed = "british";
         Liza.colour = "grey";
         Liza.talk();
+
+        Puma Rita = new Puma();
+        Rita.breathe();
+        Rita.talk();
+        Rita.isAlive = true;
+        Rita.name = "Rita";
+        Log.i("breathe()", "My name is " + Rita.name + " and " + Rita.breathe());
+        Log.i("isAlive", String.valueOf(Rita.isAlive));
     }
 }
