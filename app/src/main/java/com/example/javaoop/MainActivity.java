@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.util.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
         Cat Liza = new Cat();
         Liza.age = 8;
         Liza.name = "Liza";
-        Liza.breed = "british";
-        Liza.colour = "grey";
         Liza.talk();
 
         Puma Rita = new Puma();

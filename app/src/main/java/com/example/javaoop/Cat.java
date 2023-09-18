@@ -5,8 +5,8 @@ import android.util.Log;
 public class Cat extends Animal {
     int age;
     String name;
-    String breed;
-    String colour;
+    private String breed;
+    private String colour;
 
     public Cat(){
 
