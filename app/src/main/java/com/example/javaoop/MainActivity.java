@@ -33,5 +33,11 @@ public class MainActivity extends AppCompatActivity {
         Rita.name = "Rita";
         Log.i("breathe()", "My name is " + Rita.name + " and " + Rita.breathe());
         Log.i("isAlive", String.valueOf(Rita.isAlive));
+
+        Cat puma = new Puma();
+        puma.talk();
+
+        Cat murzik = new Lion();
+        murzik.talk();
     }
 }
