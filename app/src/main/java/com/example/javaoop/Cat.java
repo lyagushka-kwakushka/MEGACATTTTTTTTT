@@ -6,6 +6,7 @@ public class Cat extends Animal {
     int age;
     String name;
     final static int NumberOfLegs = 4;
+    static int count = 0;
     private String breed;
     private String colour;
 
@@ -22,6 +23,21 @@ public class Cat extends Animal {
             } else if (Cat.this.age >=7){
                 levelOfMood = 20;
             }
+        }
+    }
+    static class CountResetter{
+        boolean moreThan100 = false;
+
+        CountResetter(){
+            if (Cat.count > 100){
+                moreThan100 = true;
+            }
+            if (moreThan100){
+                resetCount(0);
+            }
+        }
+        void resetCount(int value){
+            Cat.count = value;
         }
     }
 
@@ -53,6 +69,7 @@ public class Cat extends Animal {
         this.name = name;
         this.breed = breed;
         this.colour = colour;
+
 
         catMood = new CatMood();
 
