@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.*;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     Cat myCat;
@@ -39,5 +41,29 @@ public class MainActivity extends AppCompatActivity {
 
         Cat murzik = new Lion();
         murzik.talk();
+
+        ArrayList<Cat> cats = new ArrayList<>();
+        cats.add(DICKsi);
+        cats.add(Rita);
+        cats.add(Liza);
+        cats.add(murzik);
+        cats.add(puma);
+
+        Cat cat = cats.get(0);
+        Cat cat1 = cats.get(1);
+        Cat cat2 = cats.get(2);
+        Cat cat3 = cats.get(3);
+        Cat cat4 = cats.get(4);
+
+        Puma puma1 = (Puma)cats.get(1);
+        puma1.talk();
+
+        Cat cat5 = cats.get(3);
+        if (cat5 instanceof Puma){
+            Puma puma2 = (Puma) cat5;
+            puma2.talk();
+        } else{
+            Log.i("intanceof", "This is not puma");
+        }
     }
 }
