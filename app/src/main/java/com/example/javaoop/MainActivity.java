@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.*;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -16,21 +18,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Cat cat1 = new Cat();
-        cat1.catchMouse(1);
-        cat1.catchMouse(3);
-        cat1.talk();
+        Button button = findViewById(R.id.button);
 
-        Cat cat2 = new Cat(5, "Vaska", "Pipisa", "Red");
-        cat2.talk();
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        Cat cat3 = new Cat(8,"Murzik","bebrenskiy","white");
-        cat3.talk();
+            }
+        });
+        Cat singingCat = new Cat() {
+            @Override
+            public void talk() {
+                Log.i("talk()", "I'm singing! La-la-la!");
+            }
+        };
 
+        singingCat.talk();
         Cat cat = new Cat();
-        Log.i("numberOfLegs", "cat number of legs " + cat.NumberOfLegs + Cat.whatCatsLike());
+        cat.talk();
 
-        Lion lion = new Lion();
-        lion.talk();
     }
 }
