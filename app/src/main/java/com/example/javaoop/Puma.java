@@ -6,4 +6,9 @@ public class Puma extends Cat{
         Log.i( "talk()", "Rawr! I'm puma! my name is "+ name +
                 ", and I'm " + age + " years old.");
     }
+
+    @Override
+    void draw() {
+
+    }
 }

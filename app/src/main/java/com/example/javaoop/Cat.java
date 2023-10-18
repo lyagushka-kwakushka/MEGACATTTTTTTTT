@@ -3,7 +3,7 @@ package com.example.javaoop;
 import android.util.Log;
 import android.util.MonthDisplayHelper;
 
-public class Cat extends Animal {
+public abstract class Cat extends Animal {
     int age;
     String name;
     final static int NumberOfLegs = 4;
@@ -43,6 +43,7 @@ public class Cat extends Animal {
     }
 
     public Cat(){
+        count++;
         this.name = "John Doe";
         this.age = -1;
 
