@@ -4,8 +4,8 @@ import android.util.Log;
 
 public class Lion extends Cat {
 
-    public void Lion(){
-        Log.i("Constructor", "Lion() constuctor");
+    public Lion(){
+        Log.i("Constructor", "Lion() Constructor");
     }
     public void talk() {
         Log.i("talk()", "Rawr!I'm lion! my name is " + name +
@@ -17,6 +17,7 @@ public class Lion extends Cat {
 
     @Override
     void draw() {
+        Log.i("draw()", "Draw lion");
 
     }
 }

@@ -18,8 +18,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    Cat cat = new Lion();
-    cat.talk();
+        Cat cat = new Lion();
+        cat.talk();
+
+        Printable printable = new Puma();
+        printable.print();
+        ((Puma)printable).move();
+
+        Movable.someMethod();
+
+        Puma puma = new Puma();
+        Log.i("speedOfMoving", "" + puma.speedOfMoving);
+
+        Log.i("speedOfMoving", "" + ((Puma)printable).speedOfMoving);
+
+        Log.i("speedOfMoving", "" + Movable.speedOfMoving);
+
+
+    }
+
+    void printAnyObject(Printable printable) {
 
     }
 }
